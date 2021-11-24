@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edMeaning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="7dp"
+        android:ems="10"
+        android:hint="fulform"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/edName"
+        app:layout_constraintTop_toBottomOf="@+id/edName" />
+
+    <Button
+        android:id="@+id/btFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="1dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="FIRST"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btNext"
+        app:layout_constraintEnd_toStartOf="@+id/btNext"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/black"
+        android:text="Next"
+        app:layout_constraintEnd_toStartOf="@+id/btPrev"
+        app:layout_constraintStart_toEndOf="@+id/btFirst"
+        app:layout_constraintTop_toTopOf="@+id/btPrev" />
+
+    <Button
+        android:id="@+id/btPrev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_700"
+        android:text="Previous"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btLast"
+        app:layout_constraintEnd_toStartOf="@+id/btLast"
+        app:layout_constraintStart_toEndOf="@+id/btNext" />
+
+    <Button
+        android:id="@+id/btLast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="7dp"
+        android:backgroundTint="@color/black"
+        android:text="Last"
+        app:layout_constraintBottom_toTopOf="@+id/btClear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btPrev"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btInsert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="INSERT"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btUpdate"
+        app:layout_constraintEnd_toStartOf="@+id/btUpdate"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/black"
+        android:text="UPDATE"
+        app:layout_constraintEnd_toStartOf="@+id/btDelete"
+        app:layout_constraintStart_toEndOf="@+id/btInsert"
+        app:layout_constraintTop_toBottomOf="@+id/btNext" />
+
+    <Button
+        android:id="@+id/btDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="13dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="Delete"
+        app:layout_constraintEnd_toStartOf="@+id/btClear"
+        app:layout_constraintStart_toEndOf="@+id/btUpdate"
+        app:layout_constraintTop_toBottomOf="@+id/btPrev" />
+
+    <Button
+        android:id="@+id/btClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/black"
+        android:text="Clear"
+        app:layout_constraintBottom_toTopOf="@+id/btView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btDelete"
+        app:layout_constraintTop_toBottomOf="@+id/btLast" />
+
+    <Button
+        android:id="@+id/btView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_700"
+        android:text="View"
+        app:layout_constraintBottom_toTopOf="@+id/searchView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btClear" />
+
+    <SearchView
+        android:id="@+id/searchView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/ListView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btView" />
+
+    <ListView
+        android:id="@+id/ListView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView3"></ListView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,2 @@
+rootProject.name = "new_db_demo"
+include ':app'
